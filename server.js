@@ -9,6 +9,9 @@ app.get('/', function(req, res){
     res.send('basic response')
 })
 
+app.get('/users', function(req, res){
+    res.send('users page')
+})
 app.listen(1111, function(){
     console.log('on server 1111...')
 })
