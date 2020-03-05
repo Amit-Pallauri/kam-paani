@@ -12,6 +12,11 @@ app.get('/', function(req, res){
 app.get('/users', function(req, res){
     res.send('users page')
 })
+
+app. get('/some', function(req, res){
+    res.send('some route')
+})
+
 app.listen(1111, function(){
     console.log('on server 1111...')
 })
