@@ -18,6 +18,11 @@ app. get('/some', function(req, res){
     res.send('some route')
 })
 
+app.get('/login', function(req, res){
+    var user = req.query.user;
+    res.send(`hi there ${user}`)
+})
+
 app.listen(PORT, function(){
     console.log('on server 1111...')
 })
