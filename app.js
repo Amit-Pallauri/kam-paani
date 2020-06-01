@@ -21,12 +21,9 @@ app.use(session({
     name : "forum",
     secret : "bookstore",
     resave: false,
-    saveUninitialized : false,
+    saveUninitialized : true,
     cookie: {
-        httpOnly : true,
-        maxAge : 1000*60*60*1,
-        sameSite : "strict",
-        secure : true 
+        maxAge : 1000*60*60*1
     }
 }))
 
