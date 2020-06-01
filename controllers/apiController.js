@@ -18,7 +18,8 @@ module.exports = {
             if (!foundEmployee) return res.send('invalid credentials')
             else {
                 req.session.userId = foundEmployee._id
-                return res.redirect('/employeedashboard')
+                res.redirect('/employeedashboard')
+                // console.log(req.session.userId)
             }       
         }catch(err){
             console.log(err.message)

@@ -12,7 +12,7 @@ const {
 
 router.post('/signUp', signUp)
 router.post('/signIn', signIn)
-router.delete('/signOut', signOut)
+router.delete('/signOut', authenticate, signOut)
 router.post('/createCompany', authenticate, createCompany)
 
 router.get('/signup', (_, res)=> { res.render('register') })
