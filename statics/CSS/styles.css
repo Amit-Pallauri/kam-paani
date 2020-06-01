@@ -1,0 +1,105 @@
+
+/* header.hbs */
+.header nav ul li {
+    list-style-type: none;
+}
+.home{
+    position: absolute;
+    top: 45%;
+    left:35%
+}
+.btn{
+    width: 400px;
+    height: 80px;
+    padding: 20px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 20px
+}
+.logout{
+    outline: none;
+    border: none;
+    background: none;
+}
+/* register.hbs */
+.reg{
+    /* border: 2px solid black; */
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 35%;
+    top: 25%
+}
+.reg button{
+    text-align: center;
+    margin-left: 50px;
+    width: 400px;
+    height: 60px
+}
+.reg div{
+    margin-bottom: 15px;
+}
+
+.empDash{
+    position: absolute;
+    left: 20%;
+    top: 42%;
+}
+
+.empDash a{
+    width: 220px;
+}
+.three{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    left: 30%;
+    top: 35%
+}
+.cardC{
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    background: black;
+}
+.cardC input[type=text]{
+    width: 200px
+}
+.cardC input[type=submit]{
+    margin-right: 20px;
+}
+.cardB{
+    position: relative;
+    text-align: center;
+    /* position: absolut */
+}
+
+.cardH{
+    width: 800px;
+    margin: 20px 350px;
+    background: yellowgreen;
+}
+.cardH .card-body{
+    text-align: center;
+}
+
+
+.cardH a{
+    width: 200px;
+    height: 50px;
+    padding: 7px;
+    margin: 0;
+    text-align: center;
+}
+.card-header{
+    background: black;
+    color:white
+}
+
+.comp h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 600px;
+}
+.comp hr{
+    border: 2px solid rgb(83, 82, 82);
+    width: 500px;
+}

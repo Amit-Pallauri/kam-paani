@@ -1,0 +1,18 @@
+<div class="comp">
+    <h1>listed companies:</h1>
+    <hr>
+</div>
+
+    {{#each companies}}
+    <div class="card cardH">
+    <div class="card-header"> Company : {{this.name}} </div>
+    <div class="card-body">
+        <h5 class="card-title">CEO: {{this.ceoName}}</h5>
+        <a href="companydash/{{this._id}}" class="btn btn-dark">Details</a>
+    </div>
+    </div>  
+    </div>  
+    {{/each}}
+    
+
+

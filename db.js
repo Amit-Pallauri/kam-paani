@@ -1,10 +1,11 @@
-var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI.replace("<password>", process.env.MONGO_PASS), {
+const { connect } = require('mongoose')
+const { uri, password } = process.env
+
+connect( uri.replace('<password>', password), {
     useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true
-}).then(function (res) {
-    console.log('database is connected')
-}).catch(function (err) {
-    console.log(err)
+    useUnifiedTopology: true,
+    useFindAndModify: false
 })
+.then(_ => console.log('database connected successfully'))
+.catch(err => console.log(err))
+

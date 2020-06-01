@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Company name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each company}}
+    <tr>
+      <td>
+          <a href="/companyDetail">{{company.name}}</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
