@@ -7,13 +7,19 @@ const companySchema = new Schema({
         trim : true
     },
     ceo:{
-        type: Schema.Types.ObjectId 
+        type: Schema.Types.ObjectId,
+        ref: 'Employee' 
     },
     ceoName:{
         type: String
     },
-    employees : [{
-        type : Schema.Types.ObjectId
+    curEmployees: [{
+        type: Schema.Types.ObjectId,
+        ref: "Employee"
+    }],
+    exEmployees:[{
+        type : Schema.Types.ObjectId,
+        ref: 'Employee' 
     }]
 },
 { timestamps: true }

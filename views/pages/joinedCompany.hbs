@@ -1,0 +1,22 @@
+
+<div class="conta">
+    <h3 style="">welcome mr./mrs. <b>{{user.name}}</b>, to your workplace</h3>
+    <hr>
+    {{#if user.working}}
+    <div class=" Jcomp card text-center text-white bg-dark">
+        <div class="card-header" style="text-align: left;">
+            Company :  <a style="background:rgb(27, 26, 26); text-decoration: none; color: rgb(58, 238, 13); font-size:15px; padding: 8px 30px;" href="/companydashboard/{{company._id}}">{{company.name}}</a> 
+        </div>
+        <div class="card-body cb">
+            <h5 class="card-title">Designation : {{user.role}}</h5>
+            <form action="/resign" method="POST">
+                <input style="margin-top: 10px; width: 140px" type="submit" class="btn btn-secondary" value="Resign">
+            </form>
+        </div>
+        <div class="card-footer text-muted">JoinedDate : {{user.joiningDate}}</div>
+    </div>
+    {{else}}
+    <h2 style=" background:rgb(27, 27, 27); text-align:center; margin-left:12%; margin-top:10%; padding: 30px; border:2px solid black; width:800px;" class="text-muted">No Company Joined</h2>
+    {{/if}}
+</div>
+

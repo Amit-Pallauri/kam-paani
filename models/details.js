@@ -5,26 +5,19 @@ var detailSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "Company"
     },
-    employee: {
+    workingEmployee: [{
         type: Schema.Types.ObjectId,
         ref: "Employee"
-    },
+    }],
+    exEmployees:[{
+        type : Schema.Types.ObjectId,
+        ref: 'Employee' 
+    }],
     name: {
         type: String
     },
     role: {
         type: String
-    },
-    current_status: {
-        type: String,
-        default: 'working'
-    },
-    joiningdate: {
-        type: Date,
-        default: Date()
-    },
-    resignationdate: {
-        type: Date
     }
 }, {
     timestamps: true

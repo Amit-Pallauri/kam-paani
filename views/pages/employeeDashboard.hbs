@@ -1,10 +1,10 @@
-<h3 class="three">Hola `{{employee}}`. welcome to your dashboard</h3>
+<h3 class="three">Hola, `<b>{{employee}}</b>`. welcome to your dashboard</h3>
 <div class="empDash">
   {{#if employeed}}  {{!-- show create, joined and all companies --}}
-    <a href="/joinedcompany" class="btn btn-success" style="text-align: center";>Joined company</a>
+    <a href="/joinedcompany" class="btn btn-success" style=" height: 80px; padding: 20px; text-align: center";>Joined company</a>
   {{/if}}
-  <a href="/history" class="btn btn-success" style="text-align: center"; >employement history</a>
-  <a href="/allcompanies" class="btn btn-success" style="text-align: center";>All companies</a>
-  <a href="/createCompany" class="btn btn-primary" style="text-align: center";>create company</a>
+  <a href="/history" style="height: 80px; padding: 20px; text-align: center;" class="btn btn-success" style="text-align: center"; >employement history</a>
+  <a href="/allcompanies" style="height: 80px; padding: 20px; text-align: center;" class="btn btn-success" style="text-align: center";>All companies</a>
+  <a href="/createCompany" style="height: 80px; padding: 20px; text-align: center;" class="btn btn-primary" style="text-align: center";>create company</a>
 </div>
 

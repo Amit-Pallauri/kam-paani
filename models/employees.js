@@ -26,34 +26,38 @@ const employeeSchema = new Schema({
         type : Schema.Types.ObjectId,
         ref : 'Company'
     }],
+    companyLeft: {
+
+    },
     working: {
         type: Boolean,
         default :false
     },
+    role: {
+        type: String
+    },
     joiningDate : {
-        type : Number,
+        type : Date,
         required: false,
     },
     resignDate : {
-        type : Number,
+        type : Date,
         required : false
     }
-
 }, 
-{ timestamps : true }
-)
+{ timestamps : true })
 
-    employeeSchema.statics.findByEmailAndPass = async (email, password)=>{
-        try {
-            const user = await Employee.findOne({ email })
-            if(!user) throw new Error("invalid credentials")
-            const isMatched = await compare(password, user.password)
-            if(!isMatched) throw new Error("invalid credentials")
-            return user
-        } catch (error) {
-            throw error
-        }
+employeeSchema.statics.findByEmailAndPass = async (email, password)=>{
+    try {
+        const user = await Employee.findOne({ email })
+        if(!user) throw new Error("invalid credentials")
+        const isMatched = await compare(password, user.password)
+        if(!isMatched) throw new Error("invalid credentials")
+        return user
+    } catch (error) {
+        throw error
     }
+}
 
 employeeSchema.pre("save", function(next){
     var user = this;
